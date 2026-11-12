@@ -1,0 +1,35 @@
+# Safety net for a public repository, see "Rules" in AGENTS.md.
+
+# Logs and snapshots from a box: they contain SSIDs, MAC/BSSID and IP addresses
+wifi-debug/
+*.log
+snap-*.txt
+
+# Configuration and backups from a box: they can contain WiFi keys or Samba users
+*.config
+samba.conf
+smbpasswd
+*.pre-tuning
+*.removed
+
+# Keys and secrets
+.env
+*.pem
+*.key
+*.p12
+id_rsa*
+id_ed25519*
+
+# Build output and archives (make a release with git archive, see AGENTS.md)
+*.zip
+*.tar.gz
+
+# Editors, OS and local tool settings
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+.claude/settings.local.json
